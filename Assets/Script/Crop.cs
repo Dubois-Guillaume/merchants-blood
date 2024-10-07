@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class crop : MonoBehaviour
 {
-    public int timeToGrow = 10;
+    public int timeToGrow = 600;
     public int count = 0;
 
     public List<Sprite> sprites;
@@ -12,15 +12,6 @@ public class crop : MonoBehaviour
 
     private double currentTime = 0;
     public SpriteRenderer renderer;
-
-    // Start is called before the first frame update
-
-    /* 
-        Create the crop 
-        Update tick
-            if the current time is higher than growth stage then + 1
-        changeSprite method
-    */
 
     void Start()
     {
@@ -31,7 +22,7 @@ public class crop : MonoBehaviour
     {
         currentTime += 0.01;
 
-        if (currentTime >= growthStageTime[count] && count < sprites.Count)
+        if (currentTime > growthStageTime[count] && count < sprites.Count)
         {
             count++;
             changeSprite();
@@ -43,9 +34,12 @@ public class crop : MonoBehaviour
         renderer.sprite = sprites[count];
     }
 
-    // Update is called once per frame
     void Update()
     {
+        if (currentTime < timeToGrow) {
         tick();
+        }
     }
 }
+
+// Une graine de plante peut être planter
