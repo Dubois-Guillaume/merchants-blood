@@ -9,20 +9,13 @@ public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed;
 
-    public Grid grid;
-
     public Rigidbody2D rb;
     public Animator animator;
-
-    public GameObject NextCell;
 
     private Vector3 velocity = Vector3.zero;
 
     public float playerX;
     public float playerY;
-
-    public int aimCellX;
-    public int aimCellY;
 
     void FixedUpdate()
     {
@@ -31,9 +24,6 @@ public class PlayerMovement : MonoBehaviour
 
         VerticalMovePlayer(verticalMovement);
         HorizontalMovePlayer(horizontalMovement);
-
-        Vector2 mousePos = Input.mousePosition;
-        NextCell.transform.position = new Vector3 (mousePos.x, mousePos.y, -1);
     }
 
     void VerticalMovePlayer(float _verticalMovement)
