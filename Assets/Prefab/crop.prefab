@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1235768054642555590}
-  - component: {fileID: 8494428613876729652}
+  - component: {fileID: 8720212101828977690}
   - component: {fileID: 553795861514258655}
   m_Layer: 0
   m_Name: crop
@@ -33,7 +33,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8494428613876729652
+--- !u!114 &8720212101828977690
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -46,14 +46,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprites:
+  - {fileID: 1809080365, guid: 7a731698b72b10942856cf873dfbcf61, type: 3}
+  - {fileID: 875076727, guid: 7a731698b72b10942856cf873dfbcf61, type: 3}
+  - {fileID: -958483512, guid: 7a731698b72b10942856cf873dfbcf61, type: 3}
   - {fileID: 1847108614, guid: 7a731698b72b10942856cf873dfbcf61, type: 3}
   - {fileID: -107928981, guid: 7a731698b72b10942856cf873dfbcf61, type: 3}
   - {fileID: 1662489661, guid: 7a731698b72b10942856cf873dfbcf61, type: 3}
-  stages: 3
-  daysPerSprite: 1
-  growthTimeInDays: 3
+  growthDuration: 12
   isHarvestable: 0
-  name: Tomato
+  name: TOMATO
   renderer: {fileID: 553795861514258655}
 --- !u!212 &553795861514258655
 SpriteRenderer:

@@ -6,7 +6,7 @@ using UnityEngine;
 public class CropControler : MonoBehaviour
 {
 
-    public static event Action Grow;
+    public static Action Grow;
 
     // Start is called before the first frame update
     void Start()
