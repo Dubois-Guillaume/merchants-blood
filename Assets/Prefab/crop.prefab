@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 1235768054642555590}
   - component: {fileID: 8720212101828977690}
   - component: {fileID: 553795861514258655}
+  - component: {fileID: 1782939895033423002}
   m_Layer: 0
   m_Name: crop
-  m_TagString: Untagged
+  m_TagString: Crop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 6906127045811330815}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.07, y: -1.55, z: -0.85150975}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -52,10 +53,14 @@ MonoBehaviour:
   - {fileID: 1847108614, guid: 7a731698b72b10942856cf873dfbcf61, type: 3}
   - {fileID: -107928981, guid: 7a731698b72b10942856cf873dfbcf61, type: 3}
   - {fileID: 1662489661, guid: 7a731698b72b10942856cf873dfbcf61, type: 3}
-  growthDuration: 12
+  growthDuration: 6
   isHarvestable: 0
-  name: TOMATO
+  name: tomato
   renderer: {fileID: 553795861514258655}
+  isWatered: 0
+  collider2D: {fileID: 1782939895033423002}
+  item: {fileID: 11400000, guid: db5ea05731a947c47b3195240ff1bcb8, type: 2}
+  itemSeed: {fileID: 11400000, guid: 550d7347402302049a5aae1c5aa49902, type: 2}
 --- !u!212 &553795861514258655
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -96,7 +101,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 47
   m_Sprite: {fileID: 1809080365, guid: 9fdaaac56d62b0a47839bd1408f21a0c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -108,3 +113,48 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1782939895033423002
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6906127045811330815}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 1}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
